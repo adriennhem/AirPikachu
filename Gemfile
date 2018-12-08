@@ -21,6 +21,7 @@ gem 'toastr-rails', '~>1.0'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'figaro'
+gem 'paperclip', '~> 5.1.0'
 
 
 
