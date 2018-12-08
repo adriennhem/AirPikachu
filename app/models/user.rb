@@ -5,6 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :confirmable, :omniauthable, omniauth_providers: %i[facebook]
 
+   has_many :rooms
+
    # validates :fullname, presence: true, length: {maximum: 50}
 	def self.from_omniauth(auth)
 
