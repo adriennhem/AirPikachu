@@ -2,11 +2,17 @@ class Room < ApplicationRecord
   belongs_to :user
   has_many :photos
 
+  geocoded_by :address	
+  after_validation :geocode
+
+
   validates :home_type, presence: true
   validates :room_type, presence: true
   validates :accommodate, presence: true
   validates :bedroom, presence: true
   validates :bathroom, presence: true
+
+  
 
   def cover_photo(size)
   	if self.photos.length > 0
@@ -15,4 +21,5 @@ class Room < ApplicationRecord
   	  "blank.jpg"
   	end 
   end
+
 end
