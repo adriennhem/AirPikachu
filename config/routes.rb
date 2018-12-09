@@ -16,9 +16,9 @@ Rails.application.routes.draw do
       get 'amenities'
       get 'location'
     end
+    resources :photos, only: [:create, :destroy]
   end
 
-  resources :photos, only: [:create, :destroy]
 
   			 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
