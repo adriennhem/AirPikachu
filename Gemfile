@@ -22,6 +22,7 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'figaro'
 gem 'paperclip', '~> 5.1.0'
+gem 'aws-sdk', '~> 2.8'
 
 
 

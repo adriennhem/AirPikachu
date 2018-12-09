@@ -61,7 +61,19 @@ Rails.application.configure do
     port: 587,
     domain: 'sandbox60fd3ef52daf4af4a55745dd2da10659.mailgun.org',
     authentication: 'plain', 
-    user_name: 'postmaster@sandbox60fd3ef52daf4af4a55745dd2da10659.mailgun.org',
-    password: 'a47b1c9820a24dab886842c568542ef7-52cbfb43-5b37ed30'
+    user_name: ENV['mailgun_username'],
+    password: ENV['mailgun_password']
+  }
+
+  config.paperclip_defaults = {
+    storage: :s3,
+    path: ':class/:attachment/:id/:style/:filename',
+    s3_host_name: 's3.eu-west-2.amazonaws.com',
+    s3_credentials: {
+      bucket: 'adrien-airpickachu',
+      access_key_id: ENV['s3_access_key_id'],
+      secret_access_key: ENV['s3_secret_key'],
+      s3_region: 'eu-west-2'
+    }  
   }
 end
