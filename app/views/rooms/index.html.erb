@@ -17,7 +17,15 @@
               <%= image_tag room.cover_photo(:thumb) %>
             </div>
             <div class="col-md-7">
-              <h4><%= room.listing_name %></h4>
+              <h4>
+                <%= link_to room_path(room.id), data: {turbolinks: false } do %>
+                <% if room.listing_name.blank? %>
+                  Preview The room
+                <% else %>
+                  <%= room.listing_name %>
+                <% end %>
+                <% end %>
+              </h4>
             </div>
             <div class="col-md-3 right">
               <%= link_to "Update", listing_room_path(room), class: "btn btn-form" %>
