@@ -24,6 +24,7 @@ gem 'figaro'
 gem 'paperclip', '~> 5.1.0'
 gem 'aws-sdk', '~> 2.8'
 gem 'geocoder'
+gem 'jquery-ui-rails', '~> 5.0'
 
 
 
