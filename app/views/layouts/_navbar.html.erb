@@ -15,6 +15,11 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
       <ul class="nav navbar-nav navbar-right">
+      <li>
+        <button class="btn btn-form btn-small">
+           <li><%= link_to "Become a host", new_room_path, style: "color: white; text-decoration: none;" %></li>
+        </button>
+      </li>
       <% if user_signed_in? %> 
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -29,9 +34,7 @@
           <ul class="dropdown-menu">
            <li><%= link_to "Manage Listings", rooms_path %></li>
            <li><%= link_to "List Your Space", new_room_path %></li>
-
-
-            <li><a href="#">Your Reservations</a></li>
+           <li><%= link_to "Your Reservations", your_reservations_path %></li>
            <li><%= link_to "Your Trips", your_trips_path %></li>
             <li role="separator" class="divider"></li>
             <li><%= link_to 'Edit Profile', edit_user_registration_path %></li>

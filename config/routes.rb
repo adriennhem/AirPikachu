@@ -23,6 +23,8 @@ Rails.application.routes.draw do
   end
 
   get '/your-trips' => 'reservations#your_trips'
+  get '/your-reservations' => 'reservations#your_reservations'
+
 
   			 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
